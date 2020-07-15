@@ -1,0 +1,11 @@
+[Unit]
+Description=Humble Bundle Hunter Backend
+Requires=network.target
+After=network.target
+
+[Service]
+WorkingDirectory=/home/valianmasdani/humblebundlehunter-backend
+ExecStart=/home/valianmasdani/.deno/bin/deno run --allow-net --allow-read --allow-write main.ts
+
+[Install]
+WantedBy=multi-user.target
