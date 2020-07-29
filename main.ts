@@ -70,6 +70,9 @@ console.log("Time limit:", timeLimit);
 
 router
   // Get all donors
+  .get("/", async ctx => {
+    ctx.response.body = "Hello warudo.";
+  })
   .get("/donors", async ctx => {
     dbMut.lock();
 
